@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      This is home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">This is home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div>
+    <h1>
+      Vehicles
+    </h1>
+    <ion-item-divider></ion-item-divider>
+    <ion-list>
+      <ion-item *ngFor="let item of devices">
+        <ion-label>
+          {{item.plate}} - Actual KM {{item.actuallKm}}
+        </ion-label>
+        <ion-button>Add Supply</ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
