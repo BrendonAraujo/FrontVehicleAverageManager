@@ -9,13 +9,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  devices: Array<Vehicle> = [];
+  vehicles: Array<Vehicle> = [];
 
   constructor(private vehicleService : VehicleServiceService) {
     
     var a =vehicleService.GetAll().subscribe(vehicle =>
-      this.devices = vehicle
+      this.vehicles = vehicle
     );
   }
 
+  GoToAddSupply(){
+    console.log("This is a test");
+  }
 }

@@ -19,12 +19,13 @@
     </h1>
     <ion-item-divider></ion-item-divider>
     <ion-list>
-      <ion-item *ngFor="let item of devices">
+      <ion-item *ngFor="let item of vehicles">
         <ion-label>
           {{item.plate}} - Actual KM {{item.actuallKm}}
         </ion-label>
-        <ion-button>Add Supply</ion-button>
+        <ion-button (onclick)="GoToAddSupply()">Add Supply</ion-button>
       </ion-item>
+      <ion-button (onclick)="GoToAddSupply()">Add Supply</ion-button>
     </ion-list>
   </div>
 </ion-content>
